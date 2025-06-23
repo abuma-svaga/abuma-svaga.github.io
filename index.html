@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeHub - Учет велосипедов</title>
+    <style>
+        :root {
+            --primary-color: #4b2e83;
+            --secondary-color: #6a4c9e;
+            --accent-color: #9c7fd0;
+            --text-color: #ffffff;
+            --background-color: #1a1028;
+			--bla-color: #FFFFFF
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .app-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background-color: var(--accent-color);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+            .app-icon i {
+                font-size: 60px;
+                color: white;
+            }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .app-description {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+        .download-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+            .download-btn:hover {
+                background-color: #b594e6;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+        .features {
+            padding: 60px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: var(--secondary-color);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .feature-card h3 {
+                color: var(--accent-color);
+                margin-bottom: 15px;
+                font-size: 1.3rem;
+            }
+
+        footer {
+            background-color: var(--primary-color);
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .developer-info {
+            flex: 1;
+            min-width: 300px;
+        }
+			.developer-photo img {
+    				width: 200px;       /* Ширина изображения */
+   				height: 180px;      /* Высота изображения */
+   				object-fit: contain; /* Сохраняет пропорции */
+			}
+
+            .developer-info h3 {
+                margin-bottom: 15px;
+                color: var(--accent-color);
+            }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .app-icon {
+                margin: 0 auto 20px;
+            }
+
+            .download-links {
+                justify-content: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="app-icon">
+                    <i class="fas fa-bicycle"></i>
+                </div>
+                <div class="app-info">
+                    <h1>BikeHub</h1>
+                    <p class="app-description">
+                        Мощный инструмент для учета велосипедного инвентаря с облачной синхронизацией.
+                        Управляйте своим ассортиментом легко - добавляйте, редактируйте и находите товары
+                        мгновенно с автоматическим обновлением данных между всеми устройствами.
+                    </p>
+                    <div class="download-links">
+                        <a href="#" class="download-btn">Скачать для ПК</a>
+                        <a href="https://disk.yandex.ru/d/0WDCXfLOEtj6mg" class="download-btn">Скачать для Android</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: var(--accent-color);">Возможности BikeHub</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Управление инвентарем</h3>
+                    <p>Добавляйте, редактируйте и удаляйте велосипеды в вашем ассортименте с удобным интерфейсом.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Мгновенный поиск</h3>
+                    <p>Быстро находите нужные модели по различным параметрам с помощью мощной системы поиска.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Облачная синхронизация</h3>
+                    <p>Данные автоматически синхронизируются между всеми устройствами в реальном времени.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Кроссплатформенность</h3>
+                    <p>Работайте как с десктопной версией на ПК, так и с мобильным приложением на смартфоне.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Безопасность данных</h3>
+                    <p>Ваша информация надежно защищена с использованием современных технологий шифрования.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Простота использования</h3>
+                    <p>Интуитивно понятный интерфейс позволит быстро освоить приложение без специального обучения.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="developer-info">
+                    <h3>Разработчик</h3>
+                    <p><strong>ФИО:</strong> Сардарян З.Н.</p>
+                    <p><strong>Группа:</strong> ИС-931</p>
+                    <p><strong>Email:</strong> <a href="mailto:zaruisardaran@gmail.com" style="color: var(--accent-color);">zaruisardaran@gmail.com</a></p>
+                    <p><strong>Телефон:</strong> <a href="tel:+7 904 373 4166" style="color: var(--accent-color);">+7 904 373 4166</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
